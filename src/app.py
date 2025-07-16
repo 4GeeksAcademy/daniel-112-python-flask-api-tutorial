@@ -1,19 +1,33 @@
+#########################################################
+#########################################################
 
-### OPEN SERVER ###
+### START FLASK SERVER ###
 # pipenv run python src/app.py
 
-### PARA PROBAR EN API Request Builder ###
+### PARA PROBAR EN API EN PÚBLICO ###
 # Pasar el puerto abierto (3245) de "private" a "public"
 
+#########################################################
 #########################################################
 
 
 
-from flask import Flask, jsonify, request
+# IMPORTACIONES
+from flask import Flask, jsonify, request, render_template  # Añadir "render_template" para "index.html"
 app = Flask(__name__)
 
-# Variable global con to-do's
+# VARIABLE GLOBAL CON to-do's
 todos = [ { "label": "My first task", "done": False } ]
+
+
+
+#############################
+######### INDEX.HTML ########
+#############################
+
+@app.route('/', methods=['GET'])
+def serve_index():
+    return render_template('index.html')
 
 
 
@@ -35,7 +49,7 @@ def add_new_todo():
     todos.append(dict(request_body))
     return jsonify(todos)
 
-######## DELETE /todos ########
+######## DELETE /todos/:id ########
 @app.route('/todos/<int:position>', methods=['DELETE'])
 def delete_todo(position):
     print('This is te position to be deleted:', position)
