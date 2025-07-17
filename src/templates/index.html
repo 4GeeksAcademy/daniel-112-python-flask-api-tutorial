@@ -62,6 +62,7 @@
                 <h4 class="card-title">Base URL:</h4>
                 <p class="card-text">
                     https://cautious-goldfish-g49g7gprr5v3wrqj-3245.app.github.dev
+                    <!-- {{ request.host_url }} -->
                 </p>
                 <p><strong><i>(this URL will change with every Codespace created)</i></strong></p>
             </div>
@@ -78,15 +79,18 @@
 
             <!-- TODO Endpoints -->
             <ul class="list-group list-group-flush">
+
+                    <!-- Read To-do's -->
                     <li class="list-group-item">
                         <h5>Read to-dos:</h5>
                         <p class="card-text ms-3"><span class="badge text-bg-primary">GET </span> <kbd class="">/todos</kbd></p>
                         <p>Returns a list with all the to-do's in JSON.</p>
                         <p class="text-center">
-                            <a class="text-white badge text-bg-primary mb-1" href="https://cautious-goldfish-g49g7gprr5v3wrqj-3245.app.github.dev/todos" target="_blank">Try endpoint</a>
+                            <a class="text-white badge text-bg-primary mb-1" href="/todos" target="_blank">Try endpoint</a>
                         </p>
                     </li>
 
+                    <!-- Add To-do's -->
                     <li class="list-group-item">
                         <h5>Add to-do:</h5>
                         <p class="card-text ms-3"><span class="badge text-bg-success">POST </span> <kbd class="">/todos</kbd></p>
@@ -101,6 +105,7 @@
                         </pre>
                     </li>
 
+                    <!-- Delete To-do's -->
                     <li class="list-group-item">
                         <h5>Delete specific to-do:</h5>
                         <p class="card-text ms-3"><span class="badge text-bg-danger">DELETE </span> <kbd class="">/todos/:id</kbd></p>

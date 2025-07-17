@@ -5,7 +5,7 @@
 # pipenv run python src/app.py
 
 ### PARA PROBAR EN API EN PÚBLICO ###
-# Pasar el puerto abierto (3245) de "private" a "public"
+# Pasar el puerto abierto (3245) de "private" a "public" y usar una herramienta de testeo de APIs (Postman, Hoppscotch. etc)
 
 #########################################################
 #########################################################
